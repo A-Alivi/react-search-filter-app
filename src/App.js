@@ -1,5 +1,4 @@
 import './App.css';
-import "../node_modules/bootstrap/dist/css/bootstrap.min.css";
 import React, {useState} from "react";  
 function App() {
   const fruits  = ["apple","mango","pineapple","avocado","strawberry","watermelon"];
@@ -13,10 +12,8 @@ function App() {
   return (
     <div className="App">
       <label > Search</label>
-      <input type='text' id='search' placeholder='Search' onChange={handler}></input><br/>
-      <ul className='list-group'>
-        {data.map((item) => <li className='list-group-item'>{item}</li>)}
-      </ul>
+      <input type='text' placeholder='Search' onChange={handler}></input><br/>
+      {data.map((item) => <h6>{item}</h6>)}
     </div>
   );
 }
